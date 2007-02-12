@@ -2,7 +2,7 @@
 %define		gst_req_ver	0.10.9
 %define		gstpb_req_ver	0.10.4
 Summary:	GStreamer extension library for non-linear editing
-Summary(pl.UTF-8):   Biblioteka rozszerzenia GStreamera do edycji nieliniowej
+Summary(pl.UTF-8):	Biblioteka rozszerzenia GStreamera do edycji nieliniowej
 Name:		gstreamer-gnonlin
 Version:	0.10.7
 Release:	1
