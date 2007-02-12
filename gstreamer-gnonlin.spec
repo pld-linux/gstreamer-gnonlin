@@ -2,7 +2,7 @@
 %define		gst_req_ver	0.10.9
 %define		gstpb_req_ver	0.10.4
 Summary:	GStreamer extension library for non-linear editing
-Summary(pl):	Biblioteka rozszerzenia GStreamera do edycji nieliniowej
+Summary(pl.UTF-8):   Biblioteka rozszerzenia GStreamera do edycji nieliniowej
 Name:		gstreamer-gnonlin
 Version:	0.10.7
 Release:	1
@@ -22,9 +22,9 @@ Gnonlin is a plugin for GStreamer which provides support for writing
 non-linear audio and video editing applications. It introduces the
 concept of a timeline.
 
-%description -l pl
-Gnonlin to wtyczka dla GStreamera pozwalaj±ca na pisanie aplikacji do
-nieliniowej edycji d¼wiêku i obrazu. Wprowadza pojêcia "linii czasu".
+%description -l pl.UTF-8
+Gnonlin to wtyczka dla GStreamera pozwalajÄ…ca na pisanie aplikacji do
+nieliniowej edycji dÅºwiÄ™ku i obrazu. Wprowadza pojÄ™cia "linii czasu".
 
 %prep
 %setup -q -n gnonlin-%{version}
