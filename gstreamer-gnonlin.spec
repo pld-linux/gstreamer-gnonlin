@@ -7,12 +7,12 @@
 Summary:	GStreamer extension library for non-linear editing
 Summary(pl.UTF-8):	Biblioteka rozszerzenia GStreamera do edycji nieliniowej
 Name:		gstreamer-gnonlin
-Version:	0.10.11
+Version:	0.10.13
 Release:	1
 License:	LGPL v2+
 Group:		Applications/Multimedia
 Source0:	http://gstreamer.freedesktop.org/src/gnonlin/gnonlin-%{version}.tar.bz2
-# Source0-md5:	efcfd374fd4bbf14e55030ddc8b32663
+# Source0-md5:	424647c776e641b318f5d4ec67dc37a4
 URL:		http://gnonlin.sourceforge.net/
 BuildRequires:	gstreamer-devel >= %{gst_req_ver}
 BuildRequires:	gstreamer-plugins-base-devel >= %{gstpb_req_ver}
