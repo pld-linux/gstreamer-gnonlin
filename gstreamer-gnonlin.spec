@@ -15,6 +15,7 @@ Group:		Applications/Multimedia
 Source0:	http://gstreamer.freedesktop.org/src/gnonlin/gnonlin-%{version}.tar.bz2
 # Source0-md5:	0c9e5a8f771b087fac9afa459399112e
 URL:		http://gnonlin.sourceforge.net/
+BuildRequires:	docbook-dtd412-xml
 BuildRequires:	glib2-devel >= 1:2.22
 BuildRequires:	gstreamer-devel >= %{gst_req_ver}
 BuildRequires:	gstreamer-plugins-base-devel >= %{gstpb_req_ver}
