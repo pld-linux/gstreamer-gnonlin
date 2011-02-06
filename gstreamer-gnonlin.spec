@@ -1,10 +1,10 @@
-%define		gst_major_ver	0.10
-%define		gst_req_ver	0.10.30
-%define		gstpb_req_ver	0.10.30
 #
 # Conditional build:
 %bcond_without	apidocs		# disable gtk-doc
-#
+
+%define		gst_major_ver	0.10
+%define		gst_req_ver	0.10.30
+%define		gstpb_req_ver	0.10.30
 Summary:	GStreamer extension library for non-linear editing
 Summary(pl.UTF-8):	Biblioteka rozszerzenia GStreamera do edycji nieliniowej
 Name:		gstreamer-gnonlin
