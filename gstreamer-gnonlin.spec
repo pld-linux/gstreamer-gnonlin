@@ -2,27 +2,28 @@
 # Conditional build:
 %bcond_without	apidocs		# disable gtk-doc
 
-%define		gst_major_ver	0.10
-%define		gst_req_ver	0.10.30
-%define		gstpb_req_ver	0.10.30
+%define		gst_req_ver	1.2.0
+%define		gstpb_req_ver	1.2.0
 Summary:	GStreamer extension library for non-linear editing
 Summary(pl.UTF-8):	Biblioteka rozszerzenia GStreamera do edycji nieliniowej
 Name:		gstreamer-gnonlin
-Version:	0.10.17
-Release:	2
+Version:	1.1.90
+Release:	1
 License:	LGPL v2+
 Group:		Applications/Multimedia
-Source0:	http://gstreamer.freedesktop.org/src/gnonlin/gnonlin-%{version}.tar.bz2
-# Source0-md5:	0c9e5a8f771b087fac9afa459399112e
+Source0:	http://gstreamer.freedesktop.org/src/gnonlin/gnonlin-%{version}.tar.xz
+# Source0-md5:	228180c74839caeb0f407596cd180ad3
 URL:		http://gnonlin.sourceforge.net/
 BuildRequires:	docbook-dtd412-xml
-BuildRequires:	glib2-devel >= 1:2.22
+BuildRequires:	glib2-devel >= 1:2.34
 BuildRequires:	gstreamer-devel >= %{gst_req_ver}
 BuildRequires:	gstreamer-plugins-base-devel >= %{gstpb_req_ver}
 %{?with_apidocs:BuildRequires:	gtk-doc >= 1.8}
 BuildRequires:	pkgconfig
 BuildRequires:	python >= 2.1
-Requires:	glib2 >= 1:2.22
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
+Requires:	glib2 >= 1:2.34
 Requires:	gstreamer >= %{gst_req_ver}
 Requires:	gstreamer-plugins-base >= %{gstpb_req_ver}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -55,7 +56,7 @@ Dokumentacja API Gnonlin.
 %configure \
 	--disable-silent-rules \
 	--disable-static \
-	--%{?with_apidocs:en}%{!?with_apidocs:dis}able-gtk-doc \
+	--enable-gtk-doc%{!?with_apidocs:=no} \
 	--with-html-dir=%{_gtkdocdir}
 
 %{__make}
@@ -66,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__rm} $RPM_BUILD_ROOT%{_libdir}/gstreamer-%{gst_major_ver}/*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/gstreamer-1.0/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -74,10 +75,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README RELEASE
-%attr(755,root,root) %{_libdir}/gstreamer-%{gst_major_ver}/libgnl.so
+%attr(755,root,root) %{_libdir}/gstreamer-1.0/libgnl.so
 
 %if %{with apidocs}
 %files apidocs
 %defattr(644,root,root,755)
-%{_gtkdocdir}/gnonlin-0.10
+%{_gtkdocdir}/gnonlin-1.0
 %endif
