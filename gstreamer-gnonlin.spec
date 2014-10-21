@@ -2,17 +2,17 @@
 # Conditional build:
 %bcond_without	apidocs		# disable gtk-doc
 
-%define		gst_req_ver	1.2.0
-%define		gstpb_req_ver	1.2.0
+%define		gst_req_ver	1.4.0
+%define		gstpb_req_ver	1.4.0
 Summary:	GStreamer extension library for non-linear editing
 Summary(pl.UTF-8):	Biblioteka rozszerzenia GStreamera do edycji nieliniowej
 Name:		gstreamer-gnonlin
-Version:	1.2.1
+Version:	1.4.0
 Release:	1
 License:	LGPL v2+
 Group:		Applications/Multimedia
 Source0:	http://gstreamer.freedesktop.org/src/gnonlin/gnonlin-%{version}.tar.xz
-# Source0-md5:	53fd6e5cbb1c75e07b61326050eb9a3c
+# Source0-md5:	106899d1ee36e18f92bb838244d585eb
 URL:		http://gnonlin.sourceforge.net/
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	glib2-devel >= 1:2.34
